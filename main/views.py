@@ -32,9 +32,35 @@ def menuDetail(request, slug):
     return render(request, 'main/dishes.html', context)
 
 def my_function(request):
-    address = request.GET.get('address', '')
-    total = request.GET.get('total', '')
-    return JsonResponse({'success': True, 'data': address+" - "+total})
+    try:
+        address = request.GET.get('address', '')
+        total = request.GET.get('total', '')
+        total_charges = float(0)
+        if address=="D01":
+            total_charges = float(total) + 1
+        elif address=="D02":
+            total_charges = float(total) + 2
+        elif address=="D03":
+            total_charges = float(total) + 3
+        elif address=="D04":
+            total_charges = float(total) + 4
+        elif address=="D05":
+            total_charges = float(total) + 5
+        elif address=="D06":
+            total_charges = float(total) + 6
+        elif address=="D07":
+            total_charges = float(total) + 7
+        elif address=="D08":
+            total_charges = float(total) + 8
+        elif address=="D09":
+            total_charges = float(total) + 9
+        elif address=="D10":
+            total_charges = float(total) + 10
+        else :
+            total_charges = float(total) + 11
+        return JsonResponse({'success': True, 'data': str(total_charges)})
+    except Exception as e:
+        return JsonResponse({'success': True, 'data': e})
 
 @login_required
 def add_reviews(request):
@@ -46,7 +72,7 @@ def add_reviews(request):
 
         reviews = Reviews(user=user, item=item, review=review, rslug=rslug)
         reviews.save()
-        messages.success(request, "Thank You for Reviewing this Item!!")
+        messages.success(request, "Food Will be Prepared with those specific note only")
     return redirect(f"/dishes/{item.slug}")
 
 class ItemCreateView(LoginRequiredMixin, CreateView):

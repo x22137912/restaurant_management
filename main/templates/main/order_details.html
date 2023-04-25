@@ -29,10 +29,12 @@
                <input type="submit" id="btnSubmit" value="Submit" class="btn btn-success" onclick="btnSubmitClick();" />
                     </div>
                 </div>
+                 
                 
                 
                 
-                <h4 class="text-center">Total Bill Amount After Discount : {{total_with_discount}} for {{ count }} Orders.</h4>
+                <!-- <h4 class="text-center">Total Bill Amount After Discount : {{total_with_discount}} for {{ count }} Orders.</h4> -->
+                <h6 id="lblDeliveryMessage" class="text-center"></h6>
                 <h6 class="text-center">Please Pay Either via Gpay or Cash on Delivery!</h6>
                 <div class="table-responsive">
                     <table class="table table-light">
@@ -40,7 +42,7 @@
                         <tr>
                             <th scope="col">Ordered</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">Ingredients</th>
                             <th scope="col">Description</th>
                             <th scope="col">Specification</th>
                             <th scope="col">Price</th>
@@ -118,9 +120,12 @@
         
     });
 
-    function btnSubmitClick(){
+    function btnSubmitClick()
+        {
+            
             var addressValue = $j("#address").val();
-            if(addressValue=="Select Address"){
+            if(addressValue=="Select Address")
+            {
                 alert("invalid address");
                 return false;
             }
@@ -131,8 +136,9 @@
                 type: 'GET',
                 url: url,
                 success: function(data) {
-                    if (data.success) {
-                        alert("your estimated delvery charge: "+data.data);
+                    if (data.success) 
+                    {
+                        $("#lblDeliveryMessage").html("Total Order Charges including Deilvery is "+data.data);
                     } else {
                         alert('Error!');
                     }
@@ -142,6 +148,34 @@
                 }
             });
         }
+       
 </script>
+<script>
+function myFunction() {
+  var x = document.getElementById("address").value;
+  
+  if x = 'D01'
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D02'.
+  document.getElementById("Total Bill including Deilvery Charge is"+);
+  if x = 'D03'.
+  document.getElementById("Total Bill including Deilvery Charge is"+);
+  if x = 'D04'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D05'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D06'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D07'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D08'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D09'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+  if x = 'D10'.
+  document.getElementById("Total Bill including Deilvery Charge is "+);
+}
+</script>
+
 {% endblock content %}
 

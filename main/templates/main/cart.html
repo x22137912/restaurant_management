@@ -14,7 +14,7 @@
                             <th scope="col">Description</th>
                             <th scope="col">Specification</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Total Pieces</th>
+                            <!--<th scope="col">Total Pieces</th> -->
                             <th scope="col"></th>
                         </tr>
                         </thead>
@@ -25,7 +25,7 @@
                             <td>{{ cart.item.description }}</td>
                             <td>{{ cart.item.instructions }}</td>
                             <td>{{ cart.item.price }}</td>
-                            <td>{{ cart.item.pieces }} pieces</td>
+                            <!--<td>{{ cart.item.pieces }} pieces</td> -->
                             <td><a class="btn btn-danger" href="{% url 'main:remove-from-cart' cart.id %}">Delete</a></td>
                         </tr>
                             {% endfor %}
@@ -42,7 +42,7 @@
                       <ul class="list-group">
                         <li class="list-group-item list-group-item-light text-center text-dark">Total: {{ total }}</li>
                         <li class="list-group-item list-group-item-light text-center text-dark">Number of Orders: {{ count }}</li>
-                        <li class="list-group-item list-group-item-light text-center text-dark">Total Pieces: {{ total_pieces }}</li>
+                        <!--<li class="list-group-item list-group-item-light text-center text-dark">Total Pieces: {{ total_pieces }}</li>  -->
                         <li class="list-group-item list-group-item-light text-center text-dark"><a class="btn btn-primary" href="{% url 'main:ordered' %}">Proceed To Checkout</a></li>
                         <li class="list-group-item list-group-item-light text-center"><a class="btn btn-success" href="/">Continue Buying</a></li>
                       </ul>

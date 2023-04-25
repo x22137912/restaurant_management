@@ -17,3 +17,50 @@
     text-align: center;
     justify-content: center;
 }
+body {
+
+    background: url('https://cdn.pixabay.com/photo/2016/11/18/14/05/brick-wall-1834784__340.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.col-sm-12.mt-5 h4 {
+    color: white;
+}
+
+.col-sm-12.mt-5 h3 {
+    color: white;
+}
+.home.bg-info {
+    background: url(https://www.clker.com/cliparts/q/k/q/f/0/J/restaurante-hi.png);
+}
+div#navbarNav {
+    background: url(https://www.clker.com/cliparts/q/k/q/f/0/J/restaurante-hi.png);
+}
+nav.navbar.navbar-expand-lg.navbar-dark.bg-info {
+    background: url(https://www.clker.com/cliparts/q/k/q/f/0/J/restaurante-hi.png);
+}
+.card.mb-3 {
+    background: honeydew;
+}
+a {
+    color: #63a54d;
+    text-decoration: none;
+    background-color: honeydew;
+    -webkit-text-decoration-skip: objects;
+}
+a.btn.btn-success {
+    background: lightblue;
+}
+a.mr-2.text-light {
+    background: inherit;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: white;
+}
+h5.text-center.text-danger {
+}
