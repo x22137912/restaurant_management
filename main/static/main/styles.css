@@ -17,10 +17,18 @@
     text-align: center;
     justify-content: center;
 }
-body {
 
-    background: url('https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg');
-    background-repeat: no-repeat;
+body {
+     background-color: black;
+}
+.bg-info {
+    background-color: black;
+  }
+  .bg-info {
+    background-color: black;
+  }
+   /* background: url('https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg');
+    /* background-repeat: no-repeat; 
     background-size: 100%;
     
 }
@@ -34,12 +42,18 @@ h3 {
 .col-sm-12.mt-5 h3 {
     color: white;
 }
-.home.bg-info {
+h3 {
+    color: white;
+}
+.bg-info {
+    background-color: #1b1c1c !important;
+  }
+/*.home.bg-info {
     background: url(https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg);
 }
-div#navbarNav {
+/* div#navbarNav {
     background: url(https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg);
-}
+} 
 nav.navbar.navbar-expand-lg.navbar-dark.bg-info {
     background: url(https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg);
 }
@@ -53,9 +67,9 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
-.navbar.navbar-expand-lg.navbar-dark.bg-info {
+/*.navbar.navbar-expand-lg.navbar-dark.bg-info {
     background: url(https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg);
-}
+} 
 a.btn.btn-success {
     background: lightblue;
 }
@@ -79,7 +93,8 @@ a.navbar-brand {
 .navbar-dark .navbar-brand {
     color: #fff;
     background: url(https://www.clker.com/cliparts/q/k/q/f/0/J/restaurante-hi.png);
-}
+} */
+
 h5.text-center {
     color: black;
 }
@@ -90,8 +105,11 @@ h2 {
     color: black;
 }
 h3 {
-    color: black;
+    color: white;
 }
-h3 {
-    color: black;
-}
+
+
+.text-center {
+    text-align: center !important;
+    color: white;
+  }
