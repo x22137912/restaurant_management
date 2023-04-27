@@ -18,15 +18,7 @@
     justify-content: center;
 }
 
-body {
-     background-color: black;
-}
-.bg-info {
-    background-color: black;
-  }
-  .bg-info {
-    background-color: black;
-  }
+
    /* background: url('https://mindfuldesignconsulting.com/wp-content/uploads/2015/05/Elegant-Restaurant-Design-Subtle-Color-Palette.jpg');
     /* background-repeat: no-repeat; 
     background-size: 100%;
@@ -111,5 +103,5 @@ h3 {
 
 .text-center {
     text-align: center !important;
-    color: white;
+    color: black;
   }

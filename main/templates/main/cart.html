@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-9 mt-5">
-                <h3 class="text-center">Your Cart</h3>
+                <h3 class="text-center">Cart Items</h3>
                 {% if cart_items %}
                 <div class="table-responsive">
                     <table class="table table-light">
@@ -33,18 +33,25 @@
                     </table>
                 </div>
                 {% else %}
-                <h4 class="text-center">Sorry, Your Cart is Empty....Please add Items!!!</h4>
+                <h4 class="text-center">
+                                I apologize, but your cart is empty.Please include items!</h4>
+                                <a class="btn btn-outline-success" href="/" class="text-center">Back to Menu page</a>
                 {% endif %}
             </div>
             <div class="col-sm-3 mt-5 mb-3">
                 <div class="content-section">
-                    <h3 class="text-center">Order Summary</h3>
+                    
+                    <li class="list-group-item"><b>Order Overview</b></li>
                       <ul class="list-group">
-                        <li class="list-group-item list-group-item-light text-center text-dark">Total: {{ total }}</li>
-                        <li class="list-group-item list-group-item-light text-center text-dark">Number of Orders: {{ count }}</li>
+                        <li class="list-group-item list-group-item-primary"><b>Total: {{ total }}</b></li>
+                        <!--<li class="list-group-item list-group-item-light text-center text-dark">Total: {{ total }}</li>  -->
+                        <li class="list-group-item list-group-item-warning"><b>Number Of Orders  {{ count }}</></li>
+                        <!--<li class="list-group-item list-group-item-light text-center text-dark">Number Of Orders  {{ count }}</li> -->
                         <!--<li class="list-group-item list-group-item-light text-center text-dark">Total Pieces: {{ total_pieces }}</li>  -->
-                        <li class="list-group-item list-group-item-light text-center text-dark"><a class="btn btn-primary" href="{% url 'main:ordered' %}">Proceed To Checkout</a></li>
-                        <li class="list-group-item list-group-item-light text-center"><a class="btn btn-success" href="/">Continue Buying</a></li>
+                        <li class="list-group-item list-group-item-success"><a href="{% url 'main:ordered' %}">Pay the Bill</a></li>
+                      <!--  <li class="list-group-item list-group-item-light text-center text-dark"><a class="btn btn-primary" href="{% url 'main:ordered' %}">Pay the Bill</a></li> -->
+                        <li class="list-group-item list-group-item-secondary"><a  href="/">Back to Menu page</a><i class='bx bxs-home'></i></li> 
+                      <!--  <li class="list-group-item list-group-item-light text-center"><a class="btn btn-success" href="/">Back to Menu page</a></li> -->
                       </ul>
                 </div>
             </div>
