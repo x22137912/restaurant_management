@@ -1,5 +1,7 @@
 {% extends "main/layout.html" %}
 {% block content %}
+<link rel="stylesheet" href="https://cdn.boxicons.com/boxicons/2.0.7/css/boxicons.min.css">
+
 <div class="cart">
     <div class="container">
         <div class="row">
@@ -10,9 +12,9 @@
                     <table class="table table-light">
                         <thead>
                         <tr>
+                            <th scope="col"></th>
                             <th scope="col">Name</th>
                             <th scope="col">Description</th>
-                            <th scope="col">Specifications</th>
                             <th scope="col">Price</th>
                             <!--<th scope="col">Total Pieces</th> -->
                             <th scope="col"></th>
@@ -21,12 +23,13 @@
                         <tbody>
                             {% for cart in cart_items %}
                         <tr>
+                            <td><a class="btn btn-danger btn-sm" href="{% url 'main:remove-from-cart' cart.id %}">Delete</a></td>
                             <td>{{ cart.item.title }} <span class="badge badge-{{ cart.item.label_colour }}">{{ cart.item.labels }}</span></td>
                             <td>{{ cart.item.description }}</td>
-                            <td>{{ cart.item.instructions }}</td>
-                            <td>{{ cart.item.price }}</td>
+                            <td>{{"€"}}{{ cart.item.price }}</td>
                             <!--<td>{{ cart.item.pieces }} pieces</td> -->
-                            <td><a class="btn btn-danger" href="{% url 'main:remove-from-cart' cart.id %}">Delete</a></td>
+
+                            
                         </tr>
                             {% endfor %}
                         </tbody>
@@ -50,7 +53,8 @@
                         <!--<li class="list-group-item list-group-item-light text-center text-dark">Total Pieces: {{ total_pieces }}</li>  -->
                         <li class="list-group-item list-group-item-success"><a href="{% url 'main:ordered' %}">Pay the Bill</a></li>
                       <!--  <li class="list-group-item list-group-item-light text-center text-dark"><a class="btn btn-primary" href="{% url 'main:ordered' %}">Pay the Bill</a></li> -->
-                        <li class="list-group-item list-group-item-secondary"><a  href="/">Back to Menu page</a><i class='bx bxs-home'></i></li> 
+                        
+<li class="list-group-item list-group-item-secondary"><i class='bx bx-home'></i><a  href="/">Back to Menu page</a><i class='bx bxs-home'></i></li> 
                       <!--  <li class="list-group-item list-group-item-light text-center"><a class="btn btn-success" href="/">Back to Menu page</a></li> -->
                       </ul>
                 </div>

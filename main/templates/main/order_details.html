@@ -40,8 +40,8 @@
                     <table class="table table-light">
                         <thead>
                         <tr>
-                            <th scope="col">Date of the Orderder Food</th>
-                            <th scope="col">Ordered Product</th>
+                            <th scope="col">Date of the Order Food</th>
+                            <th scope="col">Ordered Food</th>
                             <th scope="col">Price</th>
                         </tr>
                         </thead>
@@ -49,8 +49,9 @@
                             {% for item_active in items %}
                         <tr>
                             <td>{{ item_active.ordered_date }}</td>
-                            <td>{{ item_active.item.title }} <span class="badge badge-{{ item_active.item.label_colour }}">{{ item_active.item.labels }}</span></td>
-                            <td>{{ item_active.item.price }}</td>
+                            <td>{{ item_active.item.title }} <span class="badge badge-{{ item_active.item.label_colour }}"></span></td>
+                            <!--<td>{{ item_active.item.title }} <span class="badge badge-{{ item_active.item.label_colour }}">{{ item_active.item.labels }}</span></td> -->
+                            <b><td>{{"€"}}{{ item_active.item.price }}</td></b>
                         </tr>
                             {% endfor %}
                         </tbody>
