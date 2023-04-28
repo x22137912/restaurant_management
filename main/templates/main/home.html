@@ -40,10 +40,6 @@
                     <div class="card-body text-center">      
                       <p class="text-center text-success">{{ item.description }}</p>
                       <h5 class="text-center">Price € {{ item.price }}  </h5>
-                      <a href="{% url 'main:dishes' item.slug %}" class="btn btn-secondary">Chef Note</a><br>
-
-                      <br> 
-                      
                       <a href="{% url 'main:dishes' item.slug %}" class="btn btn-success">Add to Cart</a>
                     </div>
                 </div>
